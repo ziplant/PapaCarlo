@@ -1,0 +1,35 @@
+- 
+	var nav = {
+		menu: [
+			{
+				href: '#',
+				name: 'О нас'
+			},
+			{
+				href: '#',
+				name: 'Материалы'
+			},
+			{
+				href: '#',
+				name: 'Цены'
+			},
+			{
+				href: '#',
+				name: 'Примеры работ'
+			},
+			{
+				href: '#',
+				name: 'Наши скидки'
+			},
+			{
+				href: '#',
+				name: 'Контакты'
+			}
+		]
+	}
+
+mixin nav(data)
+	ul.nav
+		each item in data.menu
+			li.nav_item
+				a(href=item.href)=item.name

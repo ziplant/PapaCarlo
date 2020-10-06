@@ -1,0 +1,32 @@
+.callback
+  display: flex
+  justify-content: space-between
+  align-items: center
+  min-height: 100px
+  width: 1715px
+  max-width: 90%
+  font-weight: 900
+  font-size: 30px
+  border: 1px solid $highlightColor
+  box-shadow: 1px 3px 54px rgba(0, 0, 0, 0.52)
+  border-radius: 52px
+  padding: 0 72px
+  margin: auto
+  box-sizing: border-box
+  &_text
+    text-align: center
+    margin-right: 15px
+  &_phone
+    text-align: right
+    flex-shrink: 0
+    padding-right: 50px
+    box-sizing: border-box
+    position: relative
+    &::before
+      position: absolute
+      content: ''
+      top: -3px
+      right: 0
+      width: 35px
+      height: 35px
+      background: url('../../static/img/icons/call.png') no-repeat

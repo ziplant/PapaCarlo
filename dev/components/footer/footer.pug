@@ -1,0 +1,38 @@
+- 
+	var footer = {
+		social: [
+			{
+				src: '#',
+				image: 'fb.svg'
+			},
+			{
+				src: '#',
+				image: 'tw.svg'
+			},
+			{
+				src: '#',
+				image: 'yt.svg'
+			},
+			{
+				src: '#',
+				image: 'inst.svg'
+			},
+			{
+				src: '#',
+				image: 'ok.svg'
+			}
+		]
+	}
+
+mixin footer(data)
+	footer.footer
+		.footer_content
+			.footer_item © 2005–2018, ООО «Papa Carlo»
+			ul.footer_item.social
+				each link in data.social
+					li.social_link
+						a(
+							href=link.src 
+							style=`background-image: url('../../static/img/icons/social/${link.image}')`
+						)
+			.footer_item.--text-right Тестовый проект

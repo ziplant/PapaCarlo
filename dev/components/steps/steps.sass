@@ -1,0 +1,57 @@
+.steps
+  padding-top: 140px
+  padding-bottom: 160px
+  margin: auto
+  &_head
+    margin-bottom: 120px
+  &_content
+    width: 1067px
+    max-width: 80%
+    background-color: $bgColor
+    margin: auto
+    box-shadow: 1px 3px 54px rgba(0, 0, 0, 0.21)
+  &_item
+    display: flex
+    &:nth-child(even)
+      flex-direction: row-reverse
+      text-align: right
+
+.step
+  display: flex
+  align-items: center
+  position: relative
+  &_image
+    position: absolute
+    top: -30px
+    width: 50%
+    @media screen and (max-width: 1280px)
+      top: -20px
+      width: 45%
+  &_about
+    padding: 85px 65px
+    max-width: 450px
+    @media screen and (max-width: 1280px)
+      padding: 55px 30px
+  &:nth-child(even)
+    .step
+      &_image
+        left: 0
+        margin-left: 60%
+      &_about
+        margin-right: 40%
+  &:nth-child(odd)
+    .step
+      &_image
+        right: 0
+        margin-right: 60%
+      &_about
+        margin-left: 40%
+  &_title
+    font-weight: 900
+    font-size: 36px
+    letter-spacing: 0.07px
+    margin: 0
+    margin-bottom: 40px
+  &_desc
+    margin: 0
+    line-height: 30px

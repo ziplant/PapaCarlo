@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+html
+	include ../components/head/head.pug
+	include ../components/header/header.pug
+	include ../components/features/features.pug
+	include ../components/steps/steps.pug
+	include ../components/materials/materials.pug
+	include ../components/calc/calc.pug
+	include ../components/catalog/catalog.pug
+	include ../components/callback/callback.pug
+	include ../components/promo/promo.pug
+	include ../components/map/map.pug
+	include ../components/footer/footer.pug
+
+	head
+		+head(head.default)
+		link(rel="stylesheet", href="static/css/main.css")
+	body
+		+header(header)
+		+features(features)
+		+steps(steps)
+		+materials(materials)
+		.--bg-2
+			+calc(calc)
+			+catalog(catalog)
+		+callback()
+		+promo(promo)
+		+map(map)
+		+footer(footer)
+
+		script(src="static/js/main.js")
+		

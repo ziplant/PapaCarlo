@@ -1,0 +1,47 @@
+include ../nav/nav.pug
+include ../logo/logo.pug
+
+- 
+	var header = {
+		catalog: [
+			{
+				image: 'armchair-1.png',
+				alt: 'armchair'
+			},
+			{
+				image: 'armchair-2.png',
+				alt: 'armchair'
+			},
+			{
+				image: 'armchair-3.png',
+				alt: 'armchair'
+			},
+		],
+		paragraphs: [
+			'Реставрация мебели в Москве различной конфигурации, а также конструкции, учитывая абсолютно все нормы качества производства в нашей мастерской по реставрации, перетяжке, восстановлению и ремонту мебели.',
+			'Наша реставрационная мастерская обеспечивает своих клиентов высочайшим качеством производимых работ и абсолютную безопасность всех частей мебельного интерьера. профессиональной. В единичных вариантах ремонтные работы ведутся на дому клиента.'
+		]
+	}
+
+mixin header(data)
+	header.header.--bg-1
+		.header_top
+			nav.header_nav
+				+nav(nav)
+			.header_contact
+				.header_phone
+					a(href="tel:+79645688877") +7 (964) 568-88-77
+				.header_worktime пн-сб 9:00-19:00
+		.header_main
+			.header_preview
+				.header_logo
+					+logo()
+				h2.header_title.head.head--smaller Мебельная мастерская 
+					.--text-highlight Papa Carlo
+				.header_catalog
+					each image in data.catalog
+						img(src=`static/img/header/armchairs/${image.image}`, alt=image.alt)
+			.header_info
+				each paragraph in data.paragraphs
+					p.header_paragraph.paragraph= paragraph
+				button.header_showmore Смотреть каталог

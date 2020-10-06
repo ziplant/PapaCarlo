@@ -1,0 +1,119 @@
+.materials
+  padding: 150px 10px 70px
+  &_head
+  &_desc
+    max-width: 680px
+    margin: 50px auto
+  &_form
+    max-width: 835px
+    margin: auto
+  &_items
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: center
+  &_material
+    flex-basis: 33.33336%
+  &_colors
+    margin-top: 15px
+  &_design
+    margin-top: 60px
+
+.material
+  font-weight: bold
+  font-size: 26px
+  text-align: center
+  margin-bottom: 56px
+  &_input
+    display: none
+    &:checked + .material_label
+      &::before
+        display: block
+  &_label
+    display: flex
+    width: 220px
+    height: 220px
+    margin: auto
+    align-items: center
+    justify-content: center
+    position: relative
+    cursor: pointer
+    &::before
+      position: absolute
+      content: ""
+      width: 52px
+      height: 52px
+      background-color: $highlightColor
+      background-image: url('../img/materials/icons/checkmark.png')
+      background-repeat: no-repeat
+      background-position: 50% 50%
+      border-radius: 50%
+      left: 15px
+      top: 18px
+      display: none
+
+.colors
+  &_title
+    letter-spacing: 0.54px
+    font-size: 18px
+    line-height: 30px
+    font-weight: bold
+    text-align: center
+    margin-bottom: 34px
+  &_items
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+  &_color
+    margin-bottom: 20px
+.color
+  &_input
+    display: none
+    &:checked + .color_label
+      border-color: $highlightColor
+      box-shadow: 1px 3px 54px rgba(0, 0, 0, 0.52)
+  &_label
+    display: block
+    width: 33px
+    height: 33px
+    border: 1px solid transparent
+    border-radius: 50%
+    cursor: pointer
+
+.design
+  font-weight: 600
+  background-color: $bgColor
+  border-radius: 25px
+  box-shadow: 1px 3px 24px rgba(0, 0, 0, 0.52)
+  padding: 14px 20px
+  cursor: pointer
+  &_input
+  &_element
+    padding: 0 10px
+    position: relative
+    &::before
+      position: absolute
+      content: ""
+      border: 4px solid transparent
+      border-top-color: #fff
+      opacity: 0.2
+      right: 0
+      top: 50%
+      transform: translateY(-25%)
+    &:hover
+      &::before
+        opacity: 0.8
+  &_selected
+    font-weight: bold
+    text-transform: uppercase
+    padding-left: 5px
+  &_list
+    margin-top: 20px
+    max-height: 200px
+    overflow-y: auto
+  &_item
+    padding: 10px
+    cursor: pointer
+    &:hover
+      color: $highlightColor
+      background-color: $bgColorDarken

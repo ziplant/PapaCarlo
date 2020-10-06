@@ -1,0 +1,32 @@
+- 
+	var features = {
+		features: [
+			{
+				amt: '3',
+				desc: 'года гарантии'
+			},
+			{
+				amt: '10',
+				desc: 'лет на рынке'
+			},
+			{
+				amt: '4,369',
+				desc: 'образцов ткании  кожи'
+			},
+			{
+				amt: '80',
+				desc: 'километров за МКАД'
+			},
+			{
+				amt: '40%',
+				desc: 'скидка и две подушки в подарок'
+			}
+		]
+	}
+
+mixin features(data)
+	section.features
+		each feature in data.features
+			.features_item
+				.features_amt.--text-highlight= feature.amt
+				.features_desc= feature.desc

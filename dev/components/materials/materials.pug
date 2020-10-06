@@ -1,0 +1,174 @@
+- 
+	var materials = {
+		materials: [
+			{
+				id: '1',
+				name: 'Эко-кожа',
+				image: 'eco.png'
+			},
+			{
+				id: '2',
+				name: 'Натуральная кожа',
+				image: 'nature.png'
+			},
+			{
+				id: '3',
+				name: 'Шенилл',
+				image: 'shenill.png'
+			},
+			{
+				id: '4',
+				name: 'Велюр',
+				image: 'velur.png'
+			},
+			{
+				id: '5',
+				name: 'Жаккард',
+				image: 'jakkard.png'
+			},
+			{
+				id: '6',
+				name: 'Гобеллен',
+				image: 'gobellen.png'
+			},
+		],
+		colors: [
+			{
+				id: 1,
+				hex: '#aeaeae'
+			},
+			{
+				id: 2,
+				hex: '#ffffff'
+			},
+			{
+				id: 3,
+				hex: '#d7d0b6'
+			},
+			{
+				id: 4,
+				hex: '#77672b'
+			},
+			{
+				id: 5,
+				hex: '#574400'
+			},
+			{
+				id: 6,
+				hex: '#904d30'
+			},
+			{
+				id: 7,
+				hex: '#970505'
+			},
+			{
+				id: 8,
+				hex: '#dd0707'
+			},
+			{
+				id: 9,
+				hex: '#f66666'
+			},
+			{
+				id: 10,
+				hex: '#fb8c16'
+			},
+			{
+				id: 11,
+				hex: '#fbc711'
+			},
+			{
+				id: 12,
+				hex: '#8bbf29'
+			},
+			{
+				id: 13,
+				hex: '#4d7304'
+			},
+			{
+				id: 14,
+				hex: '#3caaff'
+			},
+			{
+				id: 15,
+				hex: '#0f74c2'
+			},
+			{
+				id: 16,
+				hex: '#04508a'
+			},
+			{
+				id: 17,
+				hex: '#000000'
+			},
+			{
+				id: 18,
+				hex: '#57076a'
+			},
+		],
+		design: [
+			{
+				id: 1,
+				name: 'Рогожка'
+			},
+			{
+				id: 2,
+				name: 'Рогожка2'
+			},
+			{
+				id: 3,
+				name: 'Рогожка3'
+			},
+			{
+				id: 4,
+				name: 'Рогожка4'
+			},
+		]
+	}
+
+mixin materials(data)
+	section#materials.materials.--bg-3
+		h3.materials_head.head.--text-center Лучшие материалы
+		p.materials_desc.paragraph.--text-center
+			|Мы сотрудничаем с лучшими производителями обивочных материалов 
+			|по всему миру. Нам предлагают не только классические материалы, 
+			|но и последние новинки индустрии: «Антикоготь», лекгочистящиеся 
+			|и долговечные ткани и тд.
+		form.materials_form
+			.materials_items
+				each material in data.materials
+					.material.materials_material
+						input.material_input(
+							id=`material-${material.id}` 
+							type="radio"
+							value=material.id
+							name="material"
+						)
+						label.material_label(
+								for=`material-${material.id}`
+								style=`background: url('static/img/materials/${material.image}') no-repeat`
+							)
+							span.material_title= material.name
+			.materials_colors.colors
+				.colors_title Выберите параметры материала:
+				.colors_items
+					each color in data.colors
+						.colors_color.color
+							input.color_input(
+								id=`color-${color.id}`
+								type="radio"
+								value=color.id
+								name="color"
+							)
+							label.color_label(
+								for=`color-${color.id}`
+								style=`background-color: ${color.hex}`
+							)
+			.materials_design.design#designSelect
+				input.design_input(type="hidden", name="design")
+				.design_element Дизайн и рисунок: 
+					span.design_selected.--text-highlight ---
+				ul.design_list.--hidden(name="design")
+					each elem in data.design
+						li.design_item(data-id=elem.id data-name=elem.name)= elem.name
+			

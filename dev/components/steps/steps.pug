@@ -1,0 +1,36 @@
+- 
+	var steps = {
+		steps: [
+			{
+				num: 1,
+				desc: 'Специалист выезжает к Вам на дом. Снимает размеры, помогает с выбором ткани и кожи, рассчитывает стоимость реставрации мебели.',
+				image: 'step-1.png'
+			},
+			{
+				num: 2,
+				desc: 'Подписываем договор реставрации мебели  с четко прописанными сроками и суммой реставрации.',
+				image: 'step-2.png'
+			},
+			{
+				num: 3,
+				desc: 'Грузчики вывозят мебель в мастерскую для реставрационных работ.',
+				image: 'step-3.png'
+			},
+			{
+				num: 4,
+				desc: 'Мебельный мастер производит реставрацию Вашей мебели.',
+				image: 'step-4.png'
+			}
+		]
+	}
+
+mixin steps(data)
+	section#steps.steps.--bg-2
+		h3.steps_head.head.--text-center Как мы работаем?
+		.steps_content
+			each step in data.steps
+				.steps_item.step
+					img.step_image(src=`static/img/steps/${step.image}` alt=step.title)
+					.step_about
+						h4.step_title= `Шаг ${step.num}.`
+						p.step_desc= step.desc

@@ -1,0 +1,21 @@
+.features
+  display: flex
+  justify-content: center
+  background-color: $bgColor
+  text-align: center
+  &_item
+    border-right: 1px solid #33383b
+    padding: 0 55px
+    box-sizing: border-box
+    @media screen and (max-width: 1280px)
+      padding: 0 30px
+    &:last-child
+      border: none
+  &_amt
+    font-weight: bold
+    font-size: 80px
+    letter-spacing: 0.16px
+    @media screen and (max-width: 1280px)
+      font-size: 50px
+  &_desc
+    line-height: 18px
