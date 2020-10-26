@@ -1,3 +1,8 @@
+@import _normalize
+@import _fontface
+@import _vars
+@import _extends
+
 body
   font-family: Muller
   background-color: $bgColor
@@ -17,6 +22,7 @@ a
 .head
   font-size: 56px
   font-weight: 900
+  text-align: center
   margin: 0
   letter-spacing: 1.91px
   &--smaller
@@ -30,12 +36,6 @@ a
 
 .--text-highlight
   color: $highlightColor
-
-.--text-right
-  text-align: right
-
-.--text-center
-  text-align: center
 
 .--hidden
   display: none

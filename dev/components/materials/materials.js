@@ -1,4 +1,4 @@
-(function () {
+(() => {
   designSelect.addEventListener("click", (e) => {
     if (e.target.tagName === "LI") {
       designSelect.querySelector("input").value = e.target.dataset.id;

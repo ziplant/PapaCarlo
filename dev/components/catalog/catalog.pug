@@ -1,8 +1,38 @@
 - 
 	var catalog = {
-		
+		images: [
+			{
+				id: 1,
+				before: 'catalog-1.png',
+				after: 'catalog-1.png'
+			},
+			{
+				id: 2,
+				before: 'catalog-2.png',
+				after: 'catalog-2.png'
+			},
+		]
 	}
 
 mixin catalog(data)
 	section#catalog.catalog
-		h3.catalog_head.head.--text-center Каталог выполненных работ
+		h3.catalog_head.head Каталог выполненных работ
+		.catalog_slider.swiper
+			input.swiper_range(type="range" id="range" value="50" min="0" max="100")
+			.swiper_content
+				.swiper_inner
+					.swiper_caption#rangeCaption
+					.swiper-container
+						.swiper-wrapper
+							each image in data.images
+								.swiper-slide
+									img.swiper-slide_image.swiper-slide_image--before(
+										src=`static/img/catalog/${image.before}`, 
+										alt="catalog item"
+									)
+									img.swiper-slide_image.swiper-slide_image--after(
+										src=`static/img/catalog/${image.after}`, 
+										alt="catalog item"
+									)
+				.swiper_btn.swiper_btn--next &#8594;
+				.swiper_btn.swiper_btn--prev &#8592;

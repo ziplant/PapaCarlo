@@ -90,6 +90,14 @@ function babelJS() {
         catchError(
           webpack({
             mode: process.env.NODE_ENV,
+            module: {
+              rules: [
+                {
+                  test: /\.css$/i,
+                  use: ["style-loader", "css-loader"],
+                },
+              ],
+            },
           })
         )
       )
@@ -108,6 +116,14 @@ function babelJS() {
         catchError(
           webpack({
             mode: process.env.NODE_ENV,
+            module: {
+              rules: [
+                {
+                  test: /\.css$/i,
+                  use: ["style-loader", "css-loader"],
+                },
+              ],
+            },
           })
         )
       )

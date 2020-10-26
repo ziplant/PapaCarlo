@@ -1,3 +1,111 @@
 .catalog
-  padding-top: 50px
-  padding-bottom: 148px
+  $sliderHeight: 654px
+  $sliderTopPadding: 30px
+  $circleSize: 37px
+  $circleBorder: 7px
+  $rangeHeight: 20px
+  $rangePadding: ($circleSize + $circleBorder) / 2 + 2
+  $arrowSize: 68px
+  padding: 50px 10px 148px
+  &_head
+    margin-bottom: 81px
+  &_slider
+    max-width: 1489px
+    height: $sliderHeight
+    background-color: $bgColor
+    margin: auto
+    box-shadow: 1px 3px 54px rgba(0, 0, 0, 0.4)
+  .swiper
+    padding-top: $sliderTopPadding
+    position: relative
+    display: flex
+    flex-direction: column
+    &_content
+      width: 85%
+      height: 100%
+      padding: 0 $rangePadding
+      box-sizing: border-box
+      margin: auto
+    &_inner
+      position: relative
+      height: 100%
+    &_range
+      display: block
+      width: 85%
+      height: $rangeHeight
+      margin: auto
+      z-index: 10
+      background: none
+      &::-webkit-slider-thumb,
+      &::-moz-range-thumb 
+        cursor: pointer
+        width: $circleSize
+        height: $circleSize
+        appearance: none
+        border-radius: 50%
+        background: $highlightColor
+        border: $circleBorder solid $bgColor
+        box-shadow: 0 0 0 1px darken($highlightColor, 20s)
+    &_caption
+      position: absolute
+      bottom: 0
+      left: 50%
+      height: $sliderHeight + $sliderTopPadding
+      width: 2px
+      background-color: #fff
+      z-index: 5
+      font-size: 18px
+      &::before
+        position: absolute
+        content: "До"
+        top: $sliderTopPadding
+        left: -40px
+        transform: translateX(-100%)
+      &::after
+        position: absolute
+        content: "После"
+        top: $sliderTopPadding
+        right: -40px
+        transform: translateX(100%)
+    &-container
+      width: 100%
+      height: 100%
+    &-wrapper
+    &-slide
+      position: relative
+      display: flex
+      align-items: center
+      height: 100%
+      &_image
+        position: absolute
+        width: 100%
+        left: 0
+        top: 50%
+        transform: translateY(-50%)
+        &--before
+          filter: sepia(.85) brightness(.85) grayscale(.5);
+        &--after
+          clip-path: inset(0 0 0 50%)
+    &_btn
+      position: absolute
+      cursor: pointer
+      width: $arrowSize
+      height: $arrowSize
+      line-height: $arrowSize
+      text-align: center
+      font-size: 36px
+      color: $highlightColor
+      border: 1px solid $highlightColor
+      border-radius: 50%
+      box-sizing: border-box
+      top: 50%
+      transform: translateY(-50%)
+      z-index: 7
+      user-select: none
+      &:hover
+        border-color: #fff
+        color: #fff
+      &--next
+        right: 25px
+      &--prev
+        left: 25px
