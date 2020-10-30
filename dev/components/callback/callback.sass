@@ -1,18 +1,24 @@
 .callback
-  display: flex
-  justify-content: space-between
-  align-items: center
-  min-height: 100px
-  width: 1715px
-  max-width: 90%
-  font-weight: 900
-  font-size: 30px
-  border: 1px solid $highlightColor
-  box-shadow: 1px 3px 54px rgba(0, 0, 0, 0.52)
-  border-radius: 52px
-  padding: 0 72px
+  max-width: 1715px
   margin: auto
   box-sizing: border-box
+  &_inner
+    display: flex
+    min-height: 100px
+    justify-content: space-between
+    align-items: center
+    font-weight: 900
+    font-size: 1.875rem
+    border: 1px solid $highlightColor
+    box-shadow: 1px 3px 54px rgba(0, 0, 0, 0.52)
+    border-radius: 52px
+    padding: 0 72px
+    @media screen and (max-width: 1280px)
+      padding: 0 40px
+    @media screen and (max-width: 768px)
+      font-size: 1.2rem
+      padding: 0 20px
+      min-height: 60px
   &_text
     text-align: center
     margin-right: 15px
@@ -22,6 +28,8 @@
     padding-right: 50px
     box-sizing: border-box
     position: relative
+    @media screen and (max-width: 768px)
+      padding-right: 30px
     &::before
       position: absolute
       content: ''
@@ -30,3 +38,7 @@
       width: 35px
       height: 35px
       background: url('../../static/img/icons/call.png') no-repeat
+      @media screen and (max-width: 768px)
+        width: 21px
+        height: 21px
+        background-size: cover

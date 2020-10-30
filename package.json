@@ -32,6 +32,7 @@
   },
   "dependencies": {
     "swiper": "^6.3.4",
+    "virtual-dropdown": "^0.1.5",
     "vue": "^2.6.12"
   }
 }

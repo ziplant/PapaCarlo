@@ -106,24 +106,6 @@
 				hex: '#57076a'
 			},
 		],
-		design: [
-			{
-				id: 1,
-				name: 'Рогожка'
-			},
-			{
-				id: 2,
-				name: 'Рогожка2'
-			},
-			{
-				id: 3,
-				name: 'Рогожка3'
-			},
-			{
-				id: 4,
-				name: 'Рогожка4'
-			},
-		]
 	}
 
 mixin materials(data)
@@ -134,26 +116,27 @@ mixin materials(data)
 			|по всему миру. Нам предлагают не только классические материалы, 
 			|но и последние новинки индустрии: «Антикоготь», лекгочистящиеся 
 			|и долговечные ткани и тд.
-		form.materials_form
-			.materials_items
-				each material in data.materials
-					.material.materials_material
-						input.material_input(
-							id=`material-${material.id}` 
-							type="radio"
-							value=material.id
-							name="material"
-						)
-						label.material_label(
-								for=`material-${material.id}`
-								style=`background: url('static/img/materials/${material.image}') no-repeat`
+		form.materials_form.material-form
+			.material-form_section
+				.material-form_types
+					each material in data.materials
+						.material.material-form_material
+							input.material_input(
+								id=`material-${material.id}` 
+								type="radio"
+								value=material.id
+								name="material"
 							)
-							span.material_title= material.name
-			.materials_colors.colors
-				.colors_title Выберите параметры материала:
-				.colors_items
+							label.material_label(
+									for=`material-${material.id}`
+									style=`background-image: url('static/img/materials/${material.image}')`
+								)
+								span.material_title= material.name
+			.material-form_section
+				.materials_title Выберите параметры материала:
+				.material-form_colors
 					each color in data.colors
-						.colors_color.color
+						.color
 							input.color_input(
 								id=`color-${color.id}`
 								type="radio"
@@ -164,11 +147,9 @@ mixin materials(data)
 								for=`color-${color.id}`
 								style=`background-color: ${color.hex}`
 							)
-			.materials_design.design#designSelect
-				input.design_input(type="hidden", name="design")
-				.design_element Дизайн и рисунок: 
-					span.design_selected.--text-highlight ---
-				ul.design_list.--hidden(name="design")
-					each elem in data.design
-						li.design_item(data-id=elem.id data-name=elem.name)= elem.name
+			.material-form_design
+				.materials_title Дизайн и рисунок:
+				#designSelect
+			button(type="submit").material-form_submit Вызвать мастера
+
 			

@@ -8,161 +8,285 @@
     <link rel="stylesheet" href="static/css/main.css"/>
   </head>
   <body>
-      <section class="materials --bg-3" id="materials">
-        <h3 class="materials_head head">Лучшие материалы</h3>
-        <p class="materials_desc paragraph">
-          Мы сотрудничаем с лучшими производителями обивочных материалов 
-          по всему миру. Нам предлагают не только классические материалы, 
-          но и последние новинки индустрии: «Антикоготь», лекгочистящиеся 
-          и долговечные ткани и тд.
-        </p>
-        <form class="materials_form">
-          <div class="materials_items">
-            <div class="material materials_material">
-              <input class="material_input" id="material-1" type="radio" value="1" name="material"/>
-              <label class="material_label" for="material-1" style="background: url('static/img/materials/eco.png') no-repeat"><span class="material_title">Эко-кожа</span></label>
+      <header class="header --bg-1">
+        <div class="header_top">
+          <nav class="header_nav">
+              <ul class="nav">
+                <li class="nav_item"><a href="#">О нас</a></li>
+                <li class="nav_item"><a href="#">Материалы</a></li>
+                <li class="nav_item"><a href="#">Цены</a></li>
+                <li class="nav_item"><a href="#">Примеры работ</a></li>
+                <li class="nav_item"><a href="#">Наши скидки</a></li>
+                <li class="nav_item"><a href="#">Контакты</a></li>
+              </ul>
+          </nav>
+          <div class="header_contact">
+            <div class="header_phone"><a href="tel:+79645688877">+7 (964) 568-88-77</a></div>
+            <div class="header_worktime">пн-сб 9:00-19:00</div>
+          </div>
+        </div>
+        <div class="header_main">
+          <div class="header_preview">
+            <div class="header_logo">
+                <div class="logo"><img class="logo_image" src="static/img/logo/logo.png" alt="logo"/>
+                  <div class="logo_name">papa carlo</div>
+                </div>
             </div>
-            <div class="material materials_material">
-              <input class="material_input" id="material-2" type="radio" value="2" name="material"/>
-              <label class="material_label" for="material-2" style="background: url('static/img/materials/nature.png') no-repeat"><span class="material_title">Натуральная кожа</span></label>
-            </div>
-            <div class="material materials_material">
-              <input class="material_input" id="material-3" type="radio" value="3" name="material"/>
-              <label class="material_label" for="material-3" style="background: url('static/img/materials/shenill.png') no-repeat"><span class="material_title">Шенилл</span></label>
-            </div>
-            <div class="material materials_material">
-              <input class="material_input" id="material-4" type="radio" value="4" name="material"/>
-              <label class="material_label" for="material-4" style="background: url('static/img/materials/velur.png') no-repeat"><span class="material_title">Велюр</span></label>
-            </div>
-            <div class="material materials_material">
-              <input class="material_input" id="material-5" type="radio" value="5" name="material"/>
-              <label class="material_label" for="material-5" style="background: url('static/img/materials/jakkard.png') no-repeat"><span class="material_title">Жаккард</span></label>
-            </div>
-            <div class="material materials_material">
-              <input class="material_input" id="material-6" type="radio" value="6" name="material"/>
-              <label class="material_label" for="material-6" style="background: url('static/img/materials/gobellen.png') no-repeat"><span class="material_title">Гобеллен</span></label>
+            <h2 class="header_title head head--smaller">Мебельная мастерская 
+              <div class="--text-highlight">Papa Carlo</div>
+            </h2>
+            <div class="header_catalog"><img src="static/img/header/armchairs/armchair-1.png" alt="armchair"/><img src="static/img/header/armchairs/armchair-2.png" alt="armchair"/><img src="static/img/header/armchairs/armchair-3.png" alt="armchair"/>
             </div>
           </div>
-          <div class="materials_colors colors">
-            <div class="colors_title">Выберите параметры материала:</div>
-            <div class="colors_items">
-              <div class="colors_color color">
-                <input class="color_input" id="color-1" type="radio" value="1" name="color"/>
-                <label class="color_label" for="color-1" style="background-color: #aeaeae"></label>
-              </div>
-              <div class="colors_color color">
-                <input class="color_input" id="color-2" type="radio" value="2" name="color"/>
-                <label class="color_label" for="color-2" style="background-color: #ffffff"></label>
-              </div>
-              <div class="colors_color color">
-                <input class="color_input" id="color-3" type="radio" value="3" name="color"/>
-                <label class="color_label" for="color-3" style="background-color: #d7d0b6"></label>
-              </div>
-              <div class="colors_color color">
-                <input class="color_input" id="color-4" type="radio" value="4" name="color"/>
-                <label class="color_label" for="color-4" style="background-color: #77672b"></label>
-              </div>
-              <div class="colors_color color">
-                <input class="color_input" id="color-5" type="radio" value="5" name="color"/>
-                <label class="color_label" for="color-5" style="background-color: #574400"></label>
-              </div>
-              <div class="colors_color color">
-                <input class="color_input" id="color-6" type="radio" value="6" name="color"/>
-                <label class="color_label" for="color-6" style="background-color: #904d30"></label>
-              </div>
-              <div class="colors_color color">
-                <input class="color_input" id="color-7" type="radio" value="7" name="color"/>
-                <label class="color_label" for="color-7" style="background-color: #970505"></label>
-              </div>
-              <div class="colors_color color">
-                <input class="color_input" id="color-8" type="radio" value="8" name="color"/>
-                <label class="color_label" for="color-8" style="background-color: #dd0707"></label>
-              </div>
-              <div class="colors_color color">
-                <input class="color_input" id="color-9" type="radio" value="9" name="color"/>
-                <label class="color_label" for="color-9" style="background-color: #f66666"></label>
-              </div>
-              <div class="colors_color color">
-                <input class="color_input" id="color-10" type="radio" value="10" name="color"/>
-                <label class="color_label" for="color-10" style="background-color: #fb8c16"></label>
-              </div>
-              <div class="colors_color color">
-                <input class="color_input" id="color-11" type="radio" value="11" name="color"/>
-                <label class="color_label" for="color-11" style="background-color: #fbc711"></label>
-              </div>
-              <div class="colors_color color">
-                <input class="color_input" id="color-12" type="radio" value="12" name="color"/>
-                <label class="color_label" for="color-12" style="background-color: #8bbf29"></label>
-              </div>
-              <div class="colors_color color">
-                <input class="color_input" id="color-13" type="radio" value="13" name="color"/>
-                <label class="color_label" for="color-13" style="background-color: #4d7304"></label>
-              </div>
-              <div class="colors_color color">
-                <input class="color_input" id="color-14" type="radio" value="14" name="color"/>
-                <label class="color_label" for="color-14" style="background-color: #3caaff"></label>
-              </div>
-              <div class="colors_color color">
-                <input class="color_input" id="color-15" type="radio" value="15" name="color"/>
-                <label class="color_label" for="color-15" style="background-color: #0f74c2"></label>
-              </div>
-              <div class="colors_color color">
-                <input class="color_input" id="color-16" type="radio" value="16" name="color"/>
-                <label class="color_label" for="color-16" style="background-color: #04508a"></label>
-              </div>
-              <div class="colors_color color">
-                <input class="color_input" id="color-17" type="radio" value="17" name="color"/>
-                <label class="color_label" for="color-17" style="background-color: #000000"></label>
-              </div>
-              <div class="colors_color color">
-                <input class="color_input" id="color-18" type="radio" value="18" name="color"/>
-                <label class="color_label" for="color-18" style="background-color: #57076a"></label>
+          <div class="header_info">
+            <p class="header_paragraph paragraph">Реставрация мебели в Москве различной конфигурации, а также конструкции, учитывая абсолютно все нормы качества производства в нашей мастерской по реставрации, перетяжке, восстановлению и ремонту мебели.</p>
+            <p class="header_paragraph paragraph">Наша реставрационная мастерская обеспечивает своих клиентов высочайшим качеством производимых работ и абсолютную безопасность всех частей мебельного интерьера. профессиональной. В единичных вариантах ремонтные работы ведутся на дому клиента.</p>
+            <button class="header_showmore">Смотреть каталог</button>
+          </div>
+        </div>
+      </header>
+    <main>
+        <section class="features">
+          <div class="features_item">
+            <div class="features_amt --text-highlight">3</div>
+            <div class="features_desc">года гарантии</div>
+          </div>
+          <div class="features_item">
+            <div class="features_amt --text-highlight">10</div>
+            <div class="features_desc">лет на рынке</div>
+          </div>
+          <div class="features_item">
+            <div class="features_amt --text-highlight">4,369</div>
+            <div class="features_desc">образцов ткании  кожи</div>
+          </div>
+          <div class="features_item">
+            <div class="features_amt --text-highlight">80</div>
+            <div class="features_desc">километров за МКАД</div>
+          </div>
+          <div class="features_item">
+            <div class="features_amt --text-highlight">40%</div>
+            <div class="features_desc">скидка и две подушки в подарок</div>
+          </div>
+        </section>
+        <section class="steps --bg-2" id="steps">
+          <h3 class="steps_head head">Как мы работаем?</h3>
+          <div class="steps_content">
+            <div class="steps_item step"><img class="step_image" src="static/img/steps/step-1.png"/>
+              <div class="step_about">
+                <h4 class="step_title">Шаг 1.</h4>
+                <p class="step_desc">Специалист выезжает к Вам на дом. Снимает размеры, помогает с выбором ткани и кожи, рассчитывает стоимость реставрации мебели.</p>
               </div>
             </div>
-          </div>
-          <div class="materials_design design" id="designSelect">
-            <input class="design_input" type="hidden" name="design"/>
-            <div class="design_element">Дизайн и рисунок: <span class="design_selected --text-highlight">---</span></div>
-            <ul class="design_list --hidden" name="design">
-              <li class="design_item" data-id="1" data-name="Рогожка">Рогожка</li>
-              <li class="design_item" data-id="2" data-name="Рогожка2">Рогожка2</li>
-              <li class="design_item" data-id="3" data-name="Рогожка3">Рогожка3</li>
-              <li class="design_item" data-id="4" data-name="Рогожка4">Рогожка4</li>
-            </ul>
-          </div>
-        </form>
-      </section>
-    <div class="--bg-2">
-        <section class="calc" id="calc">
-          <h3 class="calc_head head">Расчет стоимости онлайн</h3>
-          <div class="calc_body">
-            <div class="calc_offer">offer</div>
-            <div class="calc_content">
-              <div class="calc_nav">nav</div>
-              <div class="calc_inner">inner</div>
+            <div class="steps_item step"><img class="step_image" src="static/img/steps/step-2.png"/>
+              <div class="step_about">
+                <h4 class="step_title">Шаг 2.</h4>
+                <p class="step_desc">Подписываем договор реставрации мебели  с четко прописанными сроками и суммой реставрации.</p>
+              </div>
+            </div>
+            <div class="steps_item step"><img class="step_image" src="static/img/steps/step-3.png"/>
+              <div class="step_about">
+                <h4 class="step_title">Шаг 3.</h4>
+                <p class="step_desc">Грузчики вывозят мебель в мастерскую для реставрационных работ.</p>
+              </div>
+            </div>
+            <div class="steps_item step"><img class="step_image" src="static/img/steps/step-4.png"/>
+              <div class="step_about">
+                <h4 class="step_title">Шаг 4.</h4>
+                <p class="step_desc">Мебельный мастер производит реставрацию Вашей мебели.</p>
+              </div>
             </div>
           </div>
         </section>
-        <section class="catalog" id="catalog">
-          <h3 class="catalog_head head">Каталог выполненных работ</h3>
-          <div class="catalog_slider swiper">
-            <input class="swiper_range" type="range" id="range" value="50" min="0" max="100"/>
-            <div class="swiper_content">
-              <div class="swiper_inner">
-                <div class="swiper_caption" id="rangeCaption"></div>
-                <div class="swiper-container">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img class="swiper-slide_image swiper-slide_image--before" src="static/img/catalog/catalog-1.png" alt="catalog item"/><img class="swiper-slide_image swiper-slide_image--after" src="static/img/catalog/catalog-1.png" alt="catalog item"/></div>
-                    <div class="swiper-slide"><img class="swiper-slide_image swiper-slide_image--before" src="static/img/catalog/catalog-2.png" alt="catalog item"/><img class="swiper-slide_image swiper-slide_image--after" src="static/img/catalog/catalog-2.png" alt="catalog item"/></div>
-                  </div>
+        <section class="materials --bg-3" id="materials">
+          <h3 class="materials_head head">Лучшие материалы</h3>
+          <p class="materials_desc paragraph">
+            Мы сотрудничаем с лучшими производителями обивочных материалов 
+            по всему миру. Нам предлагают не только классические материалы, 
+            но и последние новинки индустрии: «Антикоготь», лекгочистящиеся 
+            и долговечные ткани и тд.
+          </p>
+          <form class="materials_form material-form">
+            <div class="material-form_section">
+              <div class="material-form_types">
+                <div class="material material-form_material">
+                  <input class="material_input" id="material-1" type="radio" value="1" name="material"/>
+                  <label class="material_label" for="material-1" style="background-image: url('static/img/materials/eco.png')"><span class="material_title">Эко-кожа</span></label>
+                </div>
+                <div class="material material-form_material">
+                  <input class="material_input" id="material-2" type="radio" value="2" name="material"/>
+                  <label class="material_label" for="material-2" style="background-image: url('static/img/materials/nature.png')"><span class="material_title">Натуральная кожа</span></label>
+                </div>
+                <div class="material material-form_material">
+                  <input class="material_input" id="material-3" type="radio" value="3" name="material"/>
+                  <label class="material_label" for="material-3" style="background-image: url('static/img/materials/shenill.png')"><span class="material_title">Шенилл</span></label>
+                </div>
+                <div class="material material-form_material">
+                  <input class="material_input" id="material-4" type="radio" value="4" name="material"/>
+                  <label class="material_label" for="material-4" style="background-image: url('static/img/materials/velur.png')"><span class="material_title">Велюр</span></label>
+                </div>
+                <div class="material material-form_material">
+                  <input class="material_input" id="material-5" type="radio" value="5" name="material"/>
+                  <label class="material_label" for="material-5" style="background-image: url('static/img/materials/jakkard.png')"><span class="material_title">Жаккард</span></label>
+                </div>
+                <div class="material material-form_material">
+                  <input class="material_input" id="material-6" type="radio" value="6" name="material"/>
+                  <label class="material_label" for="material-6" style="background-image: url('static/img/materials/gobellen.png')"><span class="material_title">Гобеллен</span></label>
                 </div>
               </div>
-              <div class="swiper_btn swiper_btn--next">&#8594;</div>
-              <div class="swiper_btn swiper_btn--prev">&#8592;</div>
             </div>
+            <div class="material-form_section">
+              <div class="materials_title">Выберите параметры материала:</div>
+              <div class="material-form_colors">
+                <div class="color">
+                  <input class="color_input" id="color-1" type="radio" value="1" name="color"/>
+                  <label class="color_label" for="color-1" style="background-color: #aeaeae"></label>
+                </div>
+                <div class="color">
+                  <input class="color_input" id="color-2" type="radio" value="2" name="color"/>
+                  <label class="color_label" for="color-2" style="background-color: #ffffff"></label>
+                </div>
+                <div class="color">
+                  <input class="color_input" id="color-3" type="radio" value="3" name="color"/>
+                  <label class="color_label" for="color-3" style="background-color: #d7d0b6"></label>
+                </div>
+                <div class="color">
+                  <input class="color_input" id="color-4" type="radio" value="4" name="color"/>
+                  <label class="color_label" for="color-4" style="background-color: #77672b"></label>
+                </div>
+                <div class="color">
+                  <input class="color_input" id="color-5" type="radio" value="5" name="color"/>
+                  <label class="color_label" for="color-5" style="background-color: #574400"></label>
+                </div>
+                <div class="color">
+                  <input class="color_input" id="color-6" type="radio" value="6" name="color"/>
+                  <label class="color_label" for="color-6" style="background-color: #904d30"></label>
+                </div>
+                <div class="color">
+                  <input class="color_input" id="color-7" type="radio" value="7" name="color"/>
+                  <label class="color_label" for="color-7" style="background-color: #970505"></label>
+                </div>
+                <div class="color">
+                  <input class="color_input" id="color-8" type="radio" value="8" name="color"/>
+                  <label class="color_label" for="color-8" style="background-color: #dd0707"></label>
+                </div>
+                <div class="color">
+                  <input class="color_input" id="color-9" type="radio" value="9" name="color"/>
+                  <label class="color_label" for="color-9" style="background-color: #f66666"></label>
+                </div>
+                <div class="color">
+                  <input class="color_input" id="color-10" type="radio" value="10" name="color"/>
+                  <label class="color_label" for="color-10" style="background-color: #fb8c16"></label>
+                </div>
+                <div class="color">
+                  <input class="color_input" id="color-11" type="radio" value="11" name="color"/>
+                  <label class="color_label" for="color-11" style="background-color: #fbc711"></label>
+                </div>
+                <div class="color">
+                  <input class="color_input" id="color-12" type="radio" value="12" name="color"/>
+                  <label class="color_label" for="color-12" style="background-color: #8bbf29"></label>
+                </div>
+                <div class="color">
+                  <input class="color_input" id="color-13" type="radio" value="13" name="color"/>
+                  <label class="color_label" for="color-13" style="background-color: #4d7304"></label>
+                </div>
+                <div class="color">
+                  <input class="color_input" id="color-14" type="radio" value="14" name="color"/>
+                  <label class="color_label" for="color-14" style="background-color: #3caaff"></label>
+                </div>
+                <div class="color">
+                  <input class="color_input" id="color-15" type="radio" value="15" name="color"/>
+                  <label class="color_label" for="color-15" style="background-color: #0f74c2"></label>
+                </div>
+                <div class="color">
+                  <input class="color_input" id="color-16" type="radio" value="16" name="color"/>
+                  <label class="color_label" for="color-16" style="background-color: #04508a"></label>
+                </div>
+                <div class="color">
+                  <input class="color_input" id="color-17" type="radio" value="17" name="color"/>
+                  <label class="color_label" for="color-17" style="background-color: #000000"></label>
+                </div>
+                <div class="color">
+                  <input class="color_input" id="color-18" type="radio" value="18" name="color"/>
+                  <label class="color_label" for="color-18" style="background-color: #57076a"></label>
+                </div>
+              </div>
+            </div>
+            <div class="material-form_design">
+              <div class="materials_title">Дизайн и рисунок:</div>
+              <div id="designSelect"></div>
+            </div>
+            <button class="material-form_submit" type="submit">Вызвать мастера</button>
+          </form>
+        </section>
+      <div class="--bg-2">
+          <section class="catalog" id="catalog">
+            <h3 class="catalog_head head">Каталог выполненных работ</h3>
+            <div class="catalog_slider swiper">
+              <input class="swiper_range" type="range" id="range" value="50" min="0" max="100"/>
+              <div class="swiper_content">
+                <div class="swiper_inner">
+                  <div class="swiper_caption" id="rangeCaption"></div>
+                  <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide"><img class="swiper-slide_image swiper-slide_image--before" src="static/img/catalog/catalog-1.png" alt="catalog item"/><img class="swiper-slide_image swiper-slide_image--after" src="static/img/catalog/catalog-1.png" alt="catalog item"/></div>
+                      <div class="swiper-slide"><img class="swiper-slide_image swiper-slide_image--before" src="static/img/catalog/catalog-2.png" alt="catalog item"/><img class="swiper-slide_image swiper-slide_image--after" src="static/img/catalog/catalog-2.png" alt="catalog item"/></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper_btn swiper_btn--next">&#8594;</div>
+                <div class="swiper_btn swiper_btn--prev">&#8592;</div>
+              </div>
+            </div>
+          </section>
+          <section class="callback">
+            <div class="callback_inner">
+              <div class="callback_text">
+                 Дизайнер приедет и поможет вам с выбором. 
+                Все районы Москвы и МО!
+              </div>
+              <div class="callback_phone"><a class="--text-highlight" href="tel:+74955454207">+7 (495) 545-42-07</a></div>
+            </div>
+          </section>
+      </div>
+        <section class="promo" id="promo">
+          <div class="promo_inner">
+            <div class="promo_head head head--smaller">
+               Наши супер-скидки: <br>
+              40% на работу, <br>
+              10% на все материалы <br>
+              и две подушки в подарок! <br>
+            </div>
+            <div class="promo_desc">
+              Каждый клиент получает 40% скидку на работу,
+              10% скидку на материалы и две подушки в подарок. 
+              Звоните, такого еще не было!
+            </div>
+            <div class="promo_tip">*Акция временная. Срок окончания смотрите в начале страницы.</div>
           </div>
         </section>
-    </div>
+        <section class="map" id="map">
+          <div class="map_inner">
+            <script type="text/javascript" charset="utf-8" async="async" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A32d32b237fbe034eb19c803686aa38dfd61ab70a339d7302194b3d555ac2afb7&amp;amp;width=100%25&amp;amp;&amp;amp;lang=ru_RU&amp;amp;scroll=false"></script>
+          </div>
+          <p class="map_tip">
+            Вы можете бесплатно пригласить к себе нашего дизайнера или приехать 
+            к нам по адресу: Москва, ул. Вилюйская, д. 6.
+          </p>
+        </section>
+    </main>
+      <footer class="footer">
+        <div class="footer_content">
+          <div class="footer_item">© 2005–2018, ООО «Papa Carlo»</div>
+          <ul class="footer_item social">
+            <li class="social_link"><a href="#" style="background-image: url('../../static/img/icons/social/fb.svg')"></a></li>
+            <li class="social_link"><a href="#" style="background-image: url('../../static/img/icons/social/tw.svg')"></a></li>
+            <li class="social_link"><a href="#" style="background-image: url('../../static/img/icons/social/yt.svg')"></a></li>
+            <li class="social_link"><a href="#" style="background-image: url('../../static/img/icons/social/inst.svg')"></a></li>
+            <li class="social_link"><a href="#" style="background-image: url('../../static/img/icons/social/ok.svg')"></a></li>
+          </ul>
+          <div class="footer_item --text-right">Тестовый проект</div>
+        </div>
+      </footer>
     <script src="static/js/main.js"></script>
   </body>
 </html>

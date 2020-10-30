@@ -5,7 +5,6 @@ html
 	include ../components/features/features.pug
 	include ../components/steps/steps.pug
 	include ../components/materials/materials.pug
-	include ../components/calc/calc.pug
 	include ../components/catalog/catalog.pug
 	include ../components/callback/callback.pug
 	include ../components/promo/promo.pug
@@ -16,17 +15,17 @@ html
 		+head(head.default)
 		link(rel="stylesheet", href="static/css/main.css")
 	body
-		//- +header(header)
-		//- +features(features)
-		//- +steps(steps)
-		+materials(materials)
-		.--bg-2
-			+calc(calc)
-			+catalog(catalog)
-		//- +callback()
-		//- +promo(promo)
-		//- +map(map)
-		//- +footer(footer)
+		+header(header)
+		main
+			+features(features)
+			+steps(steps)
+			+materials(materials)
+			.--bg-2
+				+catalog(catalog)
+				+callback()
+			+promo(promo)
+			+map(map)
+		+footer(footer)
 
 		script(src="static/js/main.js")
 		

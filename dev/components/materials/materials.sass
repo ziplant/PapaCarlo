@@ -1,18 +1,27 @@
 .materials
-  padding: 150px 10px 70px
+  padding-top: 150px
+  padding-bottom: 70px
+  @media screen and (max-width: 768px)
+    padding-top: 100px
+  @media screen and (max-width: 480px)
+    padding-top: 40px
   &_head
+  &_title
+    letter-spacing: 0.54px
+    font-size: 1.125rem
+    line-height: 30px
+    font-weight: bold
+    text-align: center
+    margin-bottom: 34px
   &_desc
     max-width: 680px
     margin: 50px auto
     text-align: center
+    @media screen and (max-width: 768px)
+      font-size: 1.5rem
   &_form
     max-width: 835px
     margin: auto
-  &_items
-    display: flex
-    flex-wrap: wrap
-    justify-content: space-between
-    align-items: center
   &_material
     flex-basis: 33.33336%
   &_colors
@@ -20,11 +29,46 @@
   &_design
     margin-top: 60px
 
+.material-form
+  &_section
+  &_types
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    align-items: center
+  &_colors
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    margin-bottom: 30px
+  &_design
+  &_submit
+    display: block
+    background-color: $highlightColor
+    color: #fff
+    border: none
+    font-size: 1.125rem
+    font-weight: 900
+    width: 100%
+    max-width: 300px
+    margin: 60px auto 0
+    padding: 19px 0
+    border-radius: 29px
+    text-align: center
+    cursor: pointer
+    box-shadow: 1px 3px 27px -12px rgba(0, 123, 23, 0.66)
+    &:hover
+      background-color: darken($highlightColor, 5)
+
 .material
+  padding: 3%
+  box-shadow: border-box
   font-weight: bold
-  font-size: 26px
+  font-size: 1.625rem
   text-align: center
   margin-bottom: 56px
+  @media screen and (max-width: 768px)
+    margin-bottom: 20px
   &_input
     display: none
     &:checked + .material_label
@@ -39,6 +83,11 @@
     justify-content: center
     position: relative
     cursor: pointer
+    background-repeat: no-repeat
+    background-size: cover
+    @media screen and (max-width: 768px)
+      width: 140px
+      height: 140px
     &::before
       position: absolute
       content: ""
@@ -52,22 +101,13 @@
       left: 15px
       top: 18px
       display: none
+      @media screen and (max-width: 768px)
+        top: 0
+        left: 0
 
-.colors
-  &_title
-    letter-spacing: 0.54px
-    font-size: 18px
-    line-height: 30px
-    font-weight: bold
-    text-align: center
-    margin-bottom: 34px
-  &_items
-    display: flex
-    flex-wrap: wrap
-    justify-content: space-between
-  &_color
-    margin-bottom: 20px
 .color
+  padding: .5%
+  box-sizing: border-box
   &_input
     display: none
     &:checked + .color_label
@@ -80,49 +120,3 @@
     border: 1px solid transparent
     border-radius: 50%
     cursor: pointer
-
-.design
-  font-weight: 600
-  cursor: pointer
-  position: relative
-  &_input
-  &_element
-    @extend %selectBase
-    position: relative
-    z-index: 2
-    &::before
-      position: absolute
-      content: ""
-      border: 4px solid transparent
-      border-top-color: #fff
-      opacity: 0.2
-      right: 20px
-      top: 50%
-      transform: translateY(-25%)
-    &:hover
-      &::before
-        opacity: 0.8
-  &_selected
-    font-weight: bold
-    text-transform: uppercase
-  &_list
-    @extend %selectBase
-    position: absolute
-    left: 50%
-    top: 100%
-    transform: translateX(-50%)
-    border-top-left-radius: 0
-    border-top-right-radius: 0
-    padding: 14px 10px
-    width: 96%
-    margin: auto
-    max-height: 200px
-    box-sizing: border-box
-    overflow-y: auto
-    user-select: none
-  &_item
-    padding: 10px
-    cursor: pointer
-    &:hover
-      color: $highlightColor
-      background-color: $bgColorDarken

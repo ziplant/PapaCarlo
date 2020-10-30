@@ -2,19 +2,24 @@
 .promo
   max-width: 1580px
   margin: auto
-  padding: 190px 40% 170px 20px
+  padding-top: 190px
+  padding-bottom: 170px
   box-sizing: border-box
   background: url('../../static/img/promo/promo.png') no-repeat 100%
   background-size: 50%
+  @media screen and (max-width: 768px)
+    padding: 70px 5px
+  &_inner
+    
   &_head
     margin-bottom: 59px
     text-align: left
   &_desc
     max-width: 450px
-    font-size: 18px
+    font-size: 1.125rem
     font-weight: 300
   &_tip
     margin-top: 35px
-    font-size: 18px
+    font-size: 1.125rem
     font-weight: 300
     opacity: 0.1

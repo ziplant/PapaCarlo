@@ -9,13 +9,23 @@
     box-sizing: border-box
     @media screen and (max-width: 1280px)
       padding: 0 30px
+    @media screen and (max-width: 768px)
+      padding: 0 10px
+    
+      
     &:last-child
       border: none
   &_amt
     font-weight: bold
-    font-size: 80px
+    font-size: 5rem
     letter-spacing: 0.16px
     @media screen and (max-width: 1280px)
-      font-size: 50px
+      font-size: 3.125rem
+    @media screen and (max-width: 768px)
+      font-size: 2.5rem
+    @media screen and (max-width: 480px)
+      font-size: 1.8rem
   &_desc
-    line-height: 18px
+    line-height: 1.125rem
+    @media screen and (max-width: 480px)
+      font-size: .7rem

@@ -2,10 +2,18 @@
   max-width: 1715px
   box-sizing: border-box
   margin: auto
-  padding: 20px 20px 180px
+  padding-top: 20px
+  padding-bottom: 180px
+  @media screen and (max-width: 768px)
+    padding-bottom: 40px
   &_inner
+    height: 500px
+    @media screen and (max-width: 768px)
+      height: 350px
+    @media screen and (max-width: 480px)
+      height: 200px
   &_tip
-    font-size: 18px
+    font-size: 1.125rem
     font-weight: 300
     text-align: center
     margin: 30px auto

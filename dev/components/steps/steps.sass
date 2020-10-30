@@ -2,54 +2,98 @@
   padding-top: 140px
   padding-bottom: 160px
   margin: auto
+  overflow-x: hidden
+  @media screen and (max-width: 768px)
+    padding: 40px 0
+
   &_head
     margin-bottom: 120px
+    @media screen and (max-width: 768px)
+      margin-bottom: 80px
+    @media screen and (max-width: 480px)
+      margin-bottom: 20px
   &_content
     width: 1067px
     max-width: 80%
     background-color: $bgColor
     margin: auto
     box-shadow: 1px 3px 54px rgba(0, 0, 0, 0.21)
+    @media screen and (max-width: 768px)
+      max-width: 95%
   &_item
     display: flex
+    align-items: center
     &:nth-child(even)
       flex-direction: row-reverse
       text-align: right
+      @media screen and (max-width: 480px)
+        flex-direction: column
+        text-align: left
+    @media screen and (max-width: 992px)
+      flex-direction: row
+    @media screen and (max-width: 480px)
+      flex-direction: column
 
 .step
-  display: flex
-  align-items: center
   position: relative
+  @media screen and (max-width: 992px)
+    padding: 5px
   &_image
     position: absolute
     top: -30px
     @media screen and (max-width: 1280px)
       top: -20px
+      transform: scale(.7)
+    @media screen and (max-width: 992px)
+      position: relative
+      top: 0
+      transform: none
+      width: 250px
+      flex-shrink: 0
+    @media screen and (max-width: 480px)
+      width: 100%
   &_about
     padding: 85px 65px
     max-width: 450px
     @media screen and (max-width: 1280px)
-      padding: 55px 30px
+      padding: 55px 10px
+    @media screen and (max-width: 480px)
+      padding: 20px 10px
   &:nth-child(even)
     .step
       &_image
         left: 0
         margin-left: 60%
+        @media screen and (max-width: 1280px)
+          margin-left: 55%
+        @media screen and (max-width: 992px)
+          margin: 0
       &_about
         margin-right: 40%
+        @media screen and (max-width: 992px)
+          margin: 0
+
   &:nth-child(odd)
     .step
       &_image
         right: 0
         margin-right: 60%
+        @media screen and (max-width: 1280px)
+          margin-right: 55%
+        @media screen and (max-width: 992px)
+          margin: 0
       &_about
         margin-left: 40%
+        @media screen and (max-width: 992px)
+          margin: 0
   &_title
     font-weight: 900
-    font-size: 36px
+    font-size: 2.25rem
     letter-spacing: 0.07px
     margin: 0
     margin-bottom: 40px
+    @media screen and (max-width: 480px)
+      margin-bottom: 10px
   &_desc
     margin: 0
     line-height: 30px

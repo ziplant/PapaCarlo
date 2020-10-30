@@ -2,10 +2,12 @@
   min-height: 1000px
   padding-bottom: 50px
   box-sizing: border-box
+  padding-left: 10px
+  padding-right: 10px
   &_top
     display: flex
     justify-content: flex-end
-    padding: 40px 50px
+    padding: 40px 0px
     flex-wrap: wrap-reverse
     box-sizing: border-box
   &_nav
@@ -20,18 +22,19 @@
     flex-shrink: 0
   &_phone
     font-weight: 900
-    font-size: 20px
+    font-size: 1.25rem
   &_worktime
     margin-top: 10px
-    font-size: 14px
+    font-size: 0.875rem
   &_main
     display: flex
     align-items: center
-    width: 90%
     max-width: 1593px
     margin: auto
     background-color: $bgColor
     box-shadow: 1px 3px 54px rgba(0, 0, 0, 0.21)
+    @media screen and (max-width: 768px)
+      flex-direction: column
   &_preview
     flex-basis: 50%
     padding: 70px 20px
@@ -40,13 +43,20 @@
     & > *
       max-width: 635px
       margin: auto
+    @media screen and (max-width: 768px)
+      padding: 10px
+      width: 100%
   &_logo
     margin-top: -25px
     margin-left: -20px
+    @media screen and (max-width: 768px)
+      margin-top: 10px
+      margin-left: -10px
   &_title
     margin-top: 60px
     margin-bottom: 60px
     text-align: left
+    
   &_catalog
     img
       width: 30%
@@ -57,6 +67,10 @@
     padding: 48px 20px 12px
     box-sizing: border-box
     border-left: 1px solid #33383b
+    @media screen and (max-width: 768px)
+      margin: 0
+      text-align: center
+      border: none
   &_paragraph
     max-width: 570px
     margin: auto
@@ -77,3 +91,6 @@
     cursor: pointer
     &:hover
       background-color: darken(#fff, 20)
+    @media screen and (max-width: 768px)
+      transform: none
+      height: 45px

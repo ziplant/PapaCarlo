@@ -1,20 +1,32 @@
 .catalog
   $sliderHeight: 654px
+  $sliderHeightMedium: 420px
+  $sliderHeightSmall: 300px
   $sliderTopPadding: 30px
   $circleSize: 37px
   $circleBorder: 7px
   $rangeHeight: 20px
   $rangePadding: ($circleSize + $circleBorder) / 2 + 2
   $arrowSize: 68px
-  padding: 50px 10px 148px
+  padding-top: 50px
+  padding-bottom: 148px
+  @media screen and (max-width: 768px)
+    padding: 40px 0 80px
+
   &_head
     margin-bottom: 81px
   &_slider
     max-width: 1489px
     height: $sliderHeight
     background-color: $bgColor
+    overflow-x: hidden
     margin: auto
     box-shadow: 1px 3px 54px rgba(0, 0, 0, 0.4)
+    @media screen and (max-width: 1280px)
+      height: $sliderHeightMedium
+    @media screen and (max-width: 768px)
+      height: $sliderHeightSmall
+
   .swiper
     padding-top: $sliderTopPadding
     position: relative
@@ -54,7 +66,11 @@
       width: 2px
       background-color: #fff
       z-index: 5
-      font-size: 18px
+      font-size: 1.125rem
+      @media screen and (max-width: 1280px)
+        height: $sliderHeightMedium + $sliderTopPadding
+      @media screen and (max-width: 768px)
+        height: $sliderHeightSmall + $sliderTopPadding
       &::before
         position: absolute
         content: "До"
@@ -109,3 +125,8 @@
         right: 25px
       &--prev
         left: 25px
+      @media screen and (max-width: 768px)
+        width: $arrowSize / 2
+        height: $arrowSize / 2
+        line-height: $arrowSize / 2
+        font-size: 18px
